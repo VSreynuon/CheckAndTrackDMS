@@ -75,3 +75,11 @@
     color: #ff5733; /* Optional: change color on hover */
   }
   
+  /* login */
+  .custom-width {
+    width: 70%; 
+  }
+  .custom-height {
+    min-height: 400px; /* Adjust this value as needed */
+  }
+  

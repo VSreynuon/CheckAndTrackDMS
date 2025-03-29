@@ -1,40 +1,42 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import 'bootstrap-icons/font/bootstrap-icons.css'; // Import Bootstrap icons CSS
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
 const Sidebar = () => {
   return (
-    <div className="sidebar">
-      <div className="sidebar-header">
-        <h3>App Logo</h3>
-      </div>
-      <ul className="list-unstyled">
-        <li>
-          <Link to="/" className="sidebar-link">
-            <i className="bi bi-house-door sidebar-icon"></i> Home
+    <div className="d-flex flex-column p-3 text-white min-vh-100" style={{backgroundColor: "#17c3b2"}}>
+      {/* Title */}
+      {/* <h2 className="text-center mb-4">Dashboard</h2> */}
+      
+      {/* Sidebar Menu */}
+      <ul className="list-unstyled flex-grow-1">
+        <li className="mb-3">
+          <Link to="/" className="sidebar-link text-white d-flex align-items-center">
+            <i className="bi bi-house-door sidebar-icon me-2"></i> Home
           </Link>
         </li>
-        <li>
-          <Link to="/dashboard" className="sidebar-link">
-            <i className="bi bi-briefcase sidebar-icon"></i> Dashboard
+        <li className="mb-2">
+          <Link to="/dashboard" className="sidebar-link text-white d-flex align-items-center">
+            <i className="bi bi-briefcase sidebar-icon me-2"></i> Dashboard
           </Link>
         </li>
-        <li>
-          <Link to="/user-permission" className="sidebar-link">
-            <i className="bi bi-person-circle sidebar-icon"></i> User Permission
+        <li className="mb-2">
+          <Link to="/user-permission" className="sidebar-link text-white d-flex align-items-center">
+            <i className="bi bi-person-circle sidebar-icon me-2"></i> User Permission
           </Link>
         </li>
-        <li>
-          <Link to="/settings" className="sidebar-link">
-            <i className="bi bi-gear-fill sidebar-icon"></i> Settings
+        <li className="mb-2">
+          <Link to="/settings" className="sidebar-link text-white d-flex align-items-center">
+            <i className="bi bi-gear-fill sidebar-icon me-2"></i> Settings
           </Link>
         </li>
-        <li>
-          <Link to="/login" className="sidebar-link">
-            <i className="bi bi-box-arrow-right sidebar-icon"></i> Log Out
+        <li className="mb-2">
+          <Link to="/login" className="sidebar-link text-white d-flex align-items-center">
+            <i className="bi bi-box-arrow-right sidebar-icon me-2"></i> Log Out
           </Link>
         </li>
       </ul>
+
     </div>
   );
 };

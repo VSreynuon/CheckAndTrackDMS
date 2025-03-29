@@ -11,14 +11,13 @@ const Navbar = () => {
         {/* Logo & Title */}
         <div className="d-flex align-items-center">
           <img
-            src={logo} // Replace with actual logo path
+            src={logo} 
             alt="Logo"
             className="rounded-circle me-2"
             style={{ width: "50px", height: "50px" }}
           />
           <div>
             <h6 className="m-0 text-dark fw-bold">Check & Track Document</h6>
-            {/* <small className="text-primary">Management System</small> */}
           </div>
         </div>
 
@@ -60,7 +59,6 @@ const Navbar = () => {
             className="rounded-circle"
             style={{ width: "45px", height: "45px", objectFit: "cover" }}
           />
-          {/* <div className="rounded-circle bg-secondary" style={{ width: "35px", height: "35px" }}></div> */}
         </div>
       </div>
     </nav>

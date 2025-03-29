@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="footer">
-      <div className="container">
-        <p className="text-center text-muted">
+    <footer className="footer bg-light py-3 mt-4">
+      <div className="container text-center">
+        <p className="text-muted mb-0">
           &copy; 2025 Your Company. All Rights Reserved.
         </p>
       </div>

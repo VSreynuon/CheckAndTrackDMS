@@ -1,21 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Navbar from './Navbar';
 import Sidebar from './Sidebar';
 import Footer from './Footer';
 
 const Layout = ({ children }) => {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
+
   return (
     <div>
-      {/* Navbar */}
-      <Navbar />
-      
-      <div style={{ display: 'flex' }}>
-        {/* Sidebar */}
-        {/* <Sidebar /> */}
+      {/* Navbar with sidebar toggle */}
+      <Navbar toggleSidebar={toggleSidebar} />
 
-        {/* Main content area */}
-        <div className="main-content" style={{ flexGrow: 1, padding: '20px' }}>
-          {children}  {/* The content passed to the layout component */}
+      {/* Sidebar & Main Content */}
+      <div className="d-flex flex-column flex-md-row">
+        {/* Sidebar - It will go below the navbar on small screens */}
+        <div className={`sidebar-container ${isSidebarOpen ? 'open' : 'closed'}`}>
+          <Sidebar />
+        </div>
+
+        {/* Main Content */}
+        <div className="main-content flex-grow-1 p-3">
+          {children}
         </div>
       </div>
 
